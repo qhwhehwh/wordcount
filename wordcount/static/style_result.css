@@ -17,8 +17,10 @@
 }
 .hi{
     display: flex;
+    flex-wrap: wrap;
 }
 .textdetail{
+    width: 200px;
     margin: 10px;
     font-size: 20px;
     color: white;
