@@ -1,0 +1,14 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<div class="container">
+    <div class="hans">
+        <h1>안녕하세요 여기서 글자를 세세요!</h1>
+    </div>
+
+        <form class="inputbox" action="{%url 'result'%}">
+            <h2>여기에 입력해 보세요.!</h2>
+            <textarea class="form-control" rows="10" name="fulltext"></textarea><br>
+            <input type="submit" class="btn btn-info" value="Count!">
+        </form>
+    <a href="{%url 'about'%}" class="about">about</a>
+</div>

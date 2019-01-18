@@ -1,0 +1,32 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style_result.css' %}">
+<div class="container">
+
+    <h1 class="first">당신이 입력한 텍스트는 </h1>
+    <h1 class="inputext">" {{absd}} " </h1>
+    <h1 class="last">입니다.</h1>
+    <br>
+    <hr>
+
+    <h2>그 외 정보들 </h2>
+    <h3>입력한 텍스트의 길이는:  {{textlen}}</h3>
+    <h3>입력한 단어의 갯수는:  {{total}}</h3>
+
+    <h3>단어 카운트:</h3>
+    <div class="hi">
+        {% for x,y in dict %}
+            <div class="textdetail">
+                <a href="https://dict.naver.com/search.nhn?dicQuery={{x}}&x=0&y=0&query={{x}}&target=dic&ie=utf8&query_utf=&isOnlyViewEE=">{{x}}</a>
+                : {{y}}
+            </div>
+        {% endfor %}
+    </div>
+    <br>
+    <form action="{%url 'umm'%}">
+        이 글자를: <input type="text" name="um">
+        이걸로 바꿔죠: <input type="text" name="do">
+        <input type="hidden" name="fulltext" value="{{absd}}">
+        <input type="submit">
+    </form>
+    <a href="{%url 'home'%}">다시 하기</a>
+</div>

@@ -1,0 +1,27 @@
+.container{    margin: 20px;}
+.first{
+    text-align: left;
+    color: blue;
+}
+.last{
+    text-align: right;
+    color: blue;
+}
+.inputext{
+    text-align: center;   
+}
+.h1{
+    height: 40px;
+    line-height: 40px;
+    background-color: blue;
+}
+.hi{
+    display: flex;
+}
+.textdetail{
+    margin: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: lightslategray;
+    padding: 10px;
+}
